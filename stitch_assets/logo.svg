@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" width="160" height="40" fill="none">
+  <rect x="2" y="4" width="32" height="32" rx="8" fill="rgba(20, 184, 166, 0.12)" stroke="#14b8a6" stroke-width="1.5" />
+  <path d="M12 20L16 16M12 20L16 24" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 20L20 16M24 20L20 24" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="18" cy="20" r="1.5" fill="#14b8a6"/>
+  <text x="44" y="25" fill="#f8fafc" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="16" letter-spacing="-0.02em">Dev<tspan fill="#14b8a6">.folio</tspan></text>
+</svg>
