@@ -11,8 +11,13 @@ export const Navbar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const sections = ["about", "projects", "skills", "contact"];
-      const scrollPosition = window.scrollY + 120;
+      if (window.scrollY < 300) {
+        setActiveSection("home");
+        return;
+      }
+
+      const sections = ["about", "services", "projects", "pricing", "skills", "contact"];
+      const scrollPosition = window.scrollY + 160;
 
       for (const section of sections) {
         const el = document.getElementById(section);
@@ -32,8 +37,11 @@ export const Navbar = () => {
   }, []);
 
   const navLinks = [
+    { label: "Home", href: "#", id: "home" },
     { label: "About", href: "#about", id: "about" },
+    { label: "Services", href: "#services", id: "services" },
     { label: "Projects", href: "#projects", id: "projects" },
+    { label: "Pricing", href: "#pricing", id: "pricing" },
     { label: "Skills", href: "#skills", id: "skills" },
     { label: "Contact", href: "#contact", id: "contact" },
   ];
@@ -101,7 +109,7 @@ export const Navbar = () => {
             href="#contact"
             className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-[#003731] font-headline text-xs lg:text-sm font-bold hover:bg-primary-fixed-dim transition-all duration-200 shadow-[0_4px_20px_-2px_rgba(20,184,166,0.35)] hover:shadow-[0_6px_24px_rgba(20,184,166,0.5)] transform hover:-translate-y-0.5"
           >
-            <span>Get in Touch</span>
+            <span>Start a Project</span>
             <ArrowUpRight className="w-4 h-4" />
           </a>
 
@@ -155,7 +163,7 @@ export const Navbar = () => {
                 onClick={() => setMobileMenuOpen(false)}
                 className="mt-2 w-full inline-flex items-center justify-center gap-2 py-3 rounded-lg bg-primary text-[#003731] font-headline font-bold text-sm shadow-[0_4px_20px_rgba(20,184,166,0.3)]"
               >
-                <span>Get in Touch</span>
+                <span>Start a Project</span>
                 <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>

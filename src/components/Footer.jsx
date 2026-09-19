@@ -15,7 +15,7 @@ export const Footer = () => {
         {/* Left Side Tagline */}
         <div className="flex flex-col gap-1">
           <p className="font-body text-xs sm:text-sm text-on-surface-variant">
-            &copy; {new Date().getFullYear()} {personal.name} &bull; Full Stack MERN Engineer. All rights reserved.
+            &copy; {new Date().getFullYear()} {personal.name} &bull; Full-Stack Web Developer. All rights reserved.
           </p>
           <p className="font-code text-xs text-outline">
             Crafted with precision in Maharashtra, India

@@ -59,16 +59,15 @@ export const Hero = () => {
           </motion.div>
 
           {/* Headline & Designation */}
-          <motion.div variants={itemVariants} className="space-y-2">
+          <motion.div variants={itemVariants} className="space-y-3">
             <span className="font-code text-xs sm:text-sm text-primary tracking-wider uppercase font-semibold block">
               {personal.role}
             </span>
-            <h1 className="font-headline text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-on-surface leading-[1.1]">
-              Architecting{" "}
+            <h1 className="font-headline text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-on-surface leading-[1.15]">
+              Full-Stack Developer Building{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">
-                Scalable Code
-              </span>{" "}
-              &amp; Modern Web Systems.
+                Modern Web Applications
+              </span>
             </h1>
           </motion.div>
 
@@ -86,18 +85,18 @@ export const Hero = () => {
             className="flex flex-wrap items-center gap-3.5 pt-2"
           >
             <a
-              href="#projects"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-primary-container to-secondary-container text-surface font-headline text-sm sm:text-base font-bold transition-all duration-200 transform hover:-translate-y-0.5 shadow-[0_4px_24px_rgba(20,184,166,0.35)] hover:shadow-[0_8px_32px_rgba(20,184,166,0.5)]"
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-gradient-to-r from-primary-container to-secondary-container text-surface font-headline text-sm sm:text-base font-bold transition-all duration-200 transform hover:-translate-y-0.5 shadow-[0_4px_24px_rgba(20,184,166,0.35)] hover:shadow-[0_8px_32px_rgba(20,184,166,0.5)]"
             >
-              <span>Explore Featured Work</span>
-              <ArrowDown className="w-4 h-4" />
+              <span>Start a Project</span>
+              <MessageSquare className="w-4 h-4 text-surface" />
             </a>
             <a
-              href="#contact"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-surface-container-high/90 text-on-surface font-headline text-sm sm:text-base font-semibold border border-white/10 hover:border-primary/40 hover:bg-surface-bright transition-all duration-200 shadow-sm hover:text-primary"
+              href="#projects"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-surface-container-high/90 text-on-surface font-headline text-sm sm:text-base font-semibold border border-white/10 hover:border-primary/40 hover:bg-surface-bright transition-all duration-200 shadow-sm hover:text-primary"
             >
-              <MessageSquare className="w-4 h-4 text-primary" />
-              <span>Let's Connect</span>
+              <span>View My Work</span>
+              <ArrowDown className="w-4 h-4 text-primary" />
             </a>
           </motion.div>
 
@@ -158,11 +157,13 @@ export const Hero = () => {
                   ))}
                   {"\n"}  ],
                   {"\n"}  <span className="text-[#7bd0ff]">"specialties"</span>: {"{"}
-                  {"\n"}    <span className="text-[#acedff]">"architecture"</span>: <span className="text-on-surface-variant">"Microservices &amp; REST"</span>,
-                  {"\n"}    <span className="text-[#acedff]">"aiPipelines"</span>: <span className="text-on-surface-variant">"Whisper + Montreal FA"</span>,
-                  {"\n"}    <span className="text-[#acedff]">"devOps"</span>: <span className="text-on-surface-variant">"Docker, Render, Vercel CI"</span>
+                  {Object.entries(personal.terminalProfile.specialties).map(([key, val], idx, arr) => (
+                    <span key={key}>
+                      {"\n"}    <span className="text-[#acedff]">"{key}"</span>: <span className="text-on-surface-variant">"{val}"</span>{idx < arr.length - 1 ? "," : ""}
+                    </span>
+                  ))}
                   {"\n"}  {"}"},
-                  {"\n"}  <span className="text-[#7bd0ff]">"status"</span>: <span className="text-[#4fdbc8]">"Available for Contract"</span>
+                  {"\n"}  <span className="text-[#7bd0ff]">"status"</span>: <span className="text-[#4fdbc8]">"{personal.terminalProfile.status}"</span>
                   {"\n"}<span className="text-[#4cd7f6]">{"}"}</span>
                 </code>
               </pre>

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Fingerprint, Gauge, Layers, Cloud, Rocket, Database } from "lucide-react";
+import { Fingerprint, Gauge, Layers, Cloud, Rocket, Database, Server } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
 
 export const About = () => {
@@ -8,6 +8,7 @@ export const About = () => {
 
   const iconMap = {
     Layers: Layers,
+    Server: Server,
     Cloud: Cloud,
     Zap: Rocket,
     Database: Database,

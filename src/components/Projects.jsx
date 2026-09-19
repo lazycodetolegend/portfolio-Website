@@ -46,16 +46,17 @@ export const Projects = () => {
             transition={{ duration: 0.6 }}
             className="space-y-3 max-w-2xl"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-surface-container-high text-secondary font-code text-xs font-semibold tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-surface-container-high text-primary font-code text-xs font-semibold tracking-wider">
               <Code2 className="w-4 h-4" />
-              <span>FEATURED PROJECTS</span>
+              <span>PROVEN WORK</span>
             </div>
             <h2 className="font-headline text-2xl sm:text-4xl font-bold text-on-surface tracking-tight">
-              Production Systems &amp; Real-World Solutions
+              Real-World Applications &amp; Solutions
             </h2>
-
+            <p className="font-body text-sm sm:text-base text-on-surface-variant">
+              Every project is built to solve a concrete operational problem — delivering fast, responsive interfaces backed by dependable server architecture.
+            </p>
           </motion.div>
-
         </div>
 
         {/* 2 Project Cards Grid */}
@@ -180,6 +181,30 @@ export const Projects = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Subtle Freelance Project CTA Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="p-6 sm:p-8 rounded-2xl bg-surface-container-low/80 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-5"
+        >
+          <div className="space-y-1 text-center sm:text-left">
+            <h4 className="font-headline text-base sm:text-lg font-bold text-on-surface">
+              Need a similar application or custom tool built?
+            </h4>
+            <p className="font-body text-xs sm:text-sm text-on-surface-variant">
+              Let's discuss your requirements, map out the functionality, and build a working solution.
+            </p>
+          </div>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-[#003731] font-headline text-xs sm:text-sm font-bold hover:bg-primary-fixed-dim transition-all duration-200 shrink-0 shadow-md transform hover:-translate-y-0.5"
+          >
+            <span>Let's Build Something</span>
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
+        </motion.div>
       </div>
     </section>
   );

@@ -19,8 +19,8 @@ export const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    scope: "custom-app",
-    budget: "300-1k",
+    scope: "business-websites",
+    budget: "5k-10k",
     message: "",
   });
 
@@ -29,17 +29,19 @@ export const Contact = () => {
   const [lastSubmission, setLastSubmission] = useState(null);
 
   const scopeLabels = {
-    "custom-app": "Custom Full Stack Web App",
-    "ecommerce": "E-Commerce / Industrial ERP",
-    "ai-integration": "AI Pipeline & Speech Tech",
-    "bug-fixes": "Bug Fixes / Improvements to Existing Site",
+    "business-websites": "Business Website",
+    "web-applications": "Full-Stack Web Application",
+    "business-tools": "Business Tools & Automation",
+    "deployment-maintenance": "Deployment & Maintenance",
+    "custom-project": "Custom Project / Other",
   };
 
   const budgetLabels = {
-    "under-300": "Under $300 (Small task / quick fix)",
-    "300-1k": "$300 - $1,000 (Business website / landing page)",
-    "1k-3k": "$1,000 - $3,000 (Full stack web app)",
-    "discuss": "Let's discuss",
+    "5k-10k": "₹5,000 – ₹10,000 (Starter Website)",
+    "10k-18k": "₹10,000 – ₹18,000 (Business Website)",
+    "18k-35k": "₹18,000 – ₹35,000 (Web Application)",
+    "35k-plus": "₹35,000+ (Custom / Complex Application)",
+    "discuss": "Let's discuss requirements",
   };
 
   const handleSubmit = async (e) => {
@@ -107,8 +109,8 @@ export const Contact = () => {
     setFormData({
       name: "",
       email: "",
-      scope: "custom-app",
-      budget: "300-1k",
+      scope: "business-websites",
+      budget: "5k-10k",
       message: "",
     });
   };
@@ -126,13 +128,13 @@ export const Contact = () => {
         >
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-surface-container-high text-primary font-code text-xs font-semibold tracking-wider">
             <Mail className="w-4 h-4" />
-            <span>GET IN TOUCH</span>
+            <span>START A CONVERSATION</span>
           </div>
           <h2 className="font-headline text-2xl sm:text-4xl font-bold text-on-surface tracking-tight">
-            Let's Build Something Exceptional Together
+            Have a project in mind?
           </h2>
           <p className="font-body text-sm sm:text-base text-on-surface-variant">
-            Whether you need an MVP built from scratch, an existing enterprise portal overhauled, or a dedicated MERN contractor.
+            Tell me what you're building, what you need, and where you're currently stuck. I'll take a look and get back to you.
           </p>
         </motion.div>
 
@@ -286,7 +288,7 @@ export const Contact = () => {
                   {/* Project Type */}
                   <div className="space-y-1.5">
                     <label className="font-body text-xs sm:text-sm font-medium text-on-surface" htmlFor="contact-type">
-                      Project Scope
+                      Project Type
                     </label>
                     <select
                       id="contact-type"
@@ -294,17 +296,18 @@ export const Contact = () => {
                       onChange={(e) => setFormData({ ...formData, scope: e.target.value })}
                       className="w-full px-4 py-2.5 rounded-xl bg-surface-container-lowest border border-white/10 text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-sm font-body text-xs sm:text-sm transition-colors"
                     >
-                      <option value="custom-app">Custom Full Stack Web App</option>
-                      <option value="ecommerce">E-Commerce / Industrial ERP</option>
-                      <option value="ai-integration">AI Pipeline &amp; Speech Tech</option>
-                      <option value="bug-fixes">Bug Fixes / Improvements to Existing Site</option>
+                      <option value="business-websites">Business Website (₹5,000 – ₹18,000)</option>
+                      <option value="web-applications">Full-Stack Web Application (₹18,000 – ₹35,000+)</option>
+                      <option value="business-tools">Business Tools &amp; Automation</option>
+                      <option value="deployment-maintenance">Deployment &amp; Maintenance</option>
+                      <option value="custom-project">Custom Project / Other</option>
                     </select>
                   </div>
 
                   {/* Budget Range */}
                   <div className="space-y-1.5">
                     <label className="font-body text-xs sm:text-sm font-medium text-on-surface" htmlFor="contact-budget">
-                      Budget Bracket
+                      Budget Range
                     </label>
                     <select
                       id="contact-budget"
@@ -312,10 +315,11 @@ export const Contact = () => {
                       onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                       className="w-full px-4 py-2.5 rounded-xl bg-surface-container-lowest border border-white/10 text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-sm font-body text-xs sm:text-sm transition-colors"
                     >
-                      <option value="under-300">Under $300 (Small task / quick fix)</option>
-                      <option value="300-1k">$300 - $1,000 (Business website / landing page)</option>
-                      <option value="1k-3k">$1,000 - $3,000 (Full stack web app)</option>
-                      <option value="discuss">Let's discuss</option>
+                      <option value="5k-10k">₹5,000 – ₹10,000 (Starter Website)</option>
+                      <option value="10k-18k">₹10,000 – ₹18,000 (Business Website)</option>
+                      <option value="18k-35k">₹18,000 – ₹35,000 (Web Application)</option>
+                      <option value="35k-plus">₹35,000+ (Custom / Complex Application)</option>
+                      <option value="discuss">Let's discuss requirements</option>
                     </select>
                   </div>
                 </div>
@@ -323,7 +327,7 @@ export const Contact = () => {
                 {/* Message */}
                 <div className="space-y-1.5">
                   <label className="font-body text-xs sm:text-sm font-medium text-on-surface" htmlFor="contact-message">
-                    Project Details &amp; Goals
+                    Project Description &amp; Goals
                   </label>
                   <textarea
                     id="contact-message"
@@ -331,7 +335,7 @@ export const Contact = () => {
                     required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Outline your timeline, deliverables, and requirements..."
+                    placeholder="Tell me about what you're looking to build, desired features, and timeline..."
                     className="w-full px-4 py-2.5 rounded-xl bg-surface-container-lowest border border-white/10 text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-sm font-body text-xs sm:text-sm transition-colors"
                   ></textarea>
                 </div>
@@ -345,11 +349,11 @@ export const Contact = () => {
                   {isSubmitting ? (
                     <>
                       <Loader2 className="w-4 h-4 animate-spin" />
-                      <span>Dispatching Brief...</span>
+                      <span>Sending Project Brief...</span>
                     </>
                   ) : (
                     <>
-                      <span>Send Message</span>
+                      <span>Start a Project</span>
                       <Send className="w-4 h-4" />
                     </>
                   )}

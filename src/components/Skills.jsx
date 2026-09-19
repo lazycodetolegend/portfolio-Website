@@ -97,8 +97,8 @@ export const Skills = () => {
                 >
                   {renderIcon(skill.type)}
                 </div>
-                <span className={`font-code text-[11px] font-semibold px-2.5 py-1 rounded-md uppercase tracking-wider ${skill.levelColor}`}>
-                  {skill.level}
+                <span className={`font-code text-[11px] font-semibold px-2.5 py-1 rounded-md tracking-wider ${skill.levelColor}`}>
+                  {skill.category || skill.level}
                 </span>
               </div>
 
