@@ -22,6 +22,12 @@ const ACCENTS = {
     badge: "text-tertiary",
     liveBtn: "bg-tertiary text-[#00354a] hover:bg-tertiary-fixed-dim",
   },
+  primaryFixed: {
+    hover: "hover:border-primary-fixed/40 hover:shadow-[0_20px_45px_rgba(113,248,228,0.2)]",
+    title: "group-hover:text-primary-fixed",
+    badge: "text-primary-fixed",
+    liveBtn: "bg-primary-fixed text-[#003731] hover:bg-primary-fixed-dim",
+  },
 };
 
 export const Projects = () => {
