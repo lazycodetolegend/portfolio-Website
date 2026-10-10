@@ -28,6 +28,12 @@ const ACCENTS = {
     badge: "text-primary-fixed",
     liveBtn: "bg-primary-fixed text-[#003731] hover:bg-primary-fixed-dim",
   },
+  ember: {
+    hover: "hover:border-ember/40 hover:shadow-[0_20px_45px_rgba(255,178,122,0.2)]",
+    title: "group-hover:text-ember",
+    badge: "text-ember",
+    liveBtn: "bg-ember text-[#3a1d00] hover:bg-ember-dim",
+  },
 };
 
 export const Projects = () => {

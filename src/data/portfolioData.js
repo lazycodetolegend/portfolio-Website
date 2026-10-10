@@ -227,6 +227,38 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "tunners",
+      title: "Tunners",
+      category: "3D Car Customization Platform",
+      status: "Production Live",
+      accent: "ember",
+      badgeColor: "text-ember bg-ember/10",
+      statusDotColor: "bg-ember",
+      description:
+        "An interactive 3D car configurator. Browse a catalogue of vehicles, load each one as a real 3D model in the browser, customise the paint and wheels, and save your build to an account — backed by a full REST API with JWT authentication and database persistence.",
+      image: "/assets/tunners.webp",
+      alt: "Tunners 3D car configurator showing selectable vehicles with engine specifications",
+      edgeBadge: "Vercel Frontend • Render API",
+      statBadge: "Draco-Compressed 3D Models",
+      highlights: [
+        "Real-time 3D configuration with Three.js — paintable body materials and swappable rim sets on Draco-compressed glTF models",
+        "Full REST API (Express + MongoDB Atlas) with JWT auth, ownership-scoped builds and Cloudinary image uploads",
+        "Asset pipeline cut the model payload to ~27 MB so real car geometry loads on an ordinary connection",
+      ],
+      techStack: [
+        { name: "Three.js", dot: "bg-ember" },
+        { name: "Node / Express", dot: "bg-primary" },
+        { name: "MongoDB Atlas", dot: "bg-tertiary" },
+        { name: "JWT Auth", dot: "bg-primary-fixed" },
+        { name: "Cloudinary" },
+        { name: "Render" },
+        { name: "Vercel" },
+      ],
+      liveUrl: "https://car-tuning-sayam4.vercel.app",
+      liveLabel: "Open Configurator",
+      githubUrl: "https://github.com/lazycodetolegend/Car-tuning-",
+    },
+    {
       id: "raksha-shield",
       title: "RakshaShield",
       category: "Fraud Verification Platform",

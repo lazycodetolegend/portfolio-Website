@@ -37,6 +37,10 @@
   --color-tertiary-fixed: #c4e7ff;
   --color-tertiary-fixed-dim: #7bd0ff;
 
+  /* Warm accent used by the Tunners card, matching that project's own palette */
+  --color-ember: #ffb27a;
+  --color-ember-dim: #ff8c42;
+
   --color-outline: #859490;
   --color-outline-variant: #3c4947;
   --color-error: #ffb4ab;
